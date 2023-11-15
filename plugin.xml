@@ -21,7 +21,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-media"
-    version="7.0.0-dev">
+    version="7.0.0">
 
     <name>Media</name>
     <description>Cordova Media Plugin</description>
@@ -71,17 +71,6 @@
         </config-file>
         <header-file src="src/ios/CDVSound.h" />
         <source-file src="src/ios/CDVSound.m" />
-    </platform>
-
-    <!-- windows -->
-    <platform name="windows">
-        <js-module src="src/windows/MediaProxy.js" name="MediaProxy">
-            <runs />
-        </js-module>
-
-        <config-file target="package.appxmanifest" parent="/Package/Capabilities">
-            <DeviceCapability Name="microphone" />
-        </config-file>
     </platform>
 
     <!-- browser -->
