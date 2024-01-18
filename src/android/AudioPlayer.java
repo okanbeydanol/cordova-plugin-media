@@ -200,7 +200,10 @@ public class AudioPlayer implements OnCompletionListener, OnPreparedListener, On
      */
     public void moveFile(String file) {
         /* this is a hack to save the file as the specified name */
+        if (file.toString().startsWith("http://localhost/__cdvfile_sdcard__/")) {
 
+            file = file.replace("http://localhost/__cdvfile_sdcard__/", "/storage/emulated/0/");
+        }
         if (!file.startsWith("/")) {
             file = createAudioFilePath(file);
         }
