@@ -204,6 +204,10 @@ public class AudioPlayer implements OnCompletionListener, OnPreparedListener, On
 
             file = file.replace("http://localhost/__cdvfile_sdcard__/", "/storage/emulated/0/");
         }
+        if (file.toString().startsWith("/__cdvfile_sdcard__/")) {
+
+            file = file.replace("/__cdvfile_sdcard__/", "/storage/emulated/0/");
+        }
         if (!file.startsWith("/")) {
             file = createAudioFilePath(file);
         }
